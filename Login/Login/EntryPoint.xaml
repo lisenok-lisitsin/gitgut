@@ -1,0 +1,32 @@
+﻿<Window x:Class="Login.EntryPoint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login" d:DataContext="{d:DesignInstance Type=local:Updater}"
+        mc:Ignorable="d"
+        Title="Данные" Height="450" Width="400" MaxHeight="450" MaxWidth="400" MinHeight="450" MinWidth="400" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <Label x:Name="labelMain" Content="Ваши данные:" HorizontalAlignment="Center" FontFamily="Verdana" FontSize="20" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <!--<Label x:Name="urpfp" Content="Ваша фотография" FontFamily="Verdana" FontSize="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>-->
+        <Label x:Name="urbal" Content="Ваш баланс" FontFamily="Verdana" FontSize="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50"/>
+        <Label x:Name="bal" Content="{Binding MyNumber}" FontFamily="Verdana" FontSize="18" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+        <Label x:Name="card" Content="Numbers" FontFamily="Verdana" FontSize="12" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,25"/>
+        <Label Content="04/24" FontFamily="Verdana" FontSize="12" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" Margin="0,100,20,0"/>
+        <Image x:Name="pfp" Source="/pfpdef.png" Stretch="Uniform" Margin="0,0,0,0" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="takeMoney" Content="Вывести деньги" Click="takeMoney_Click" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Verdana" FontSize="12"/>
+        <Label x:Name="namesnroses" Content="Example" FontFamily="Verdana" FontSize="20" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="giveMoney" Content="Внести деньги" Click="giveMoney_Click" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Verdana" FontSize="12"/>
+        <Button x:Name="Transfer" Content="Перевести деньги другому" Click="Transfer_Click" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" Height="40" Width="120" FontFamily="Verdana" FontSize="12"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>
